@@ -6,11 +6,10 @@ FROM golang
 RUN apt-get update && apt-get -y install vim
 
 # Go environment
-ARG project_name
-RUN PATH=$PATH:/usr/local/go/bin && GOPATH=/go
+ARG PROJECT_NAME
 
-# ADD ./src/$project_name /go/src/$project_name
-# RUN cd /go/src && go install $project_name
+# ADD ./src/$PROJECT_NAME /go/src/$PROJECT_NAME
+# RUN cd /go/src && go install $PROJECT_NAME
 
 ADD ./bin /go/bin
 ENTRYPOINT ["/go/bin/hello"]

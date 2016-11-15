@@ -5,7 +5,7 @@ services:
     image: golang
     container_name: go_dev
     entrypoint: 
-      - /go/bin/project
+      - /go/bin/hello
     env_file: environment.env
     volumes:
       - ./:/go

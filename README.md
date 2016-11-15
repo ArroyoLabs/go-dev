@@ -13,7 +13,6 @@ Recompile
 
 Connect to your container.  Change "hello" to the name of your project.  From within the container run the following.
 	
-	cd /go/src
 	go install hello
 
 restart your container
