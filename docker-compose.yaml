@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  server:
+    image: golang
+    container_name: go_dev
+    entrypoint: 
+      - /go/bin/project
+    env_file: environment.env
+    volumes:
+      - ./:/go
+    ports:
+      - "8080:8080"
+      - "8888:8888"
