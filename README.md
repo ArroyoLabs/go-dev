@@ -21,9 +21,13 @@ restart your container
 Debugging
 ---------
 
-Change the entry point in your docker-compose file to be 
+Change the entry point in your docker-compose file to be some file or log.
 
-	- tail -f /var/log/error
+e.g. tail -f /var/log/bootstrap.log
+
+	entrypoint:
+		- tail 
+    	- -f 
+    	- /var/log/bootstrap.log
 
 This will allow you to figure out why your code is not compiling.  You cannot run the docker container if you do not have a valid entrypoint (e.g. go routine)
-
