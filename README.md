@@ -6,7 +6,12 @@ Golang development container - a good starting point for general Golang developm
 Usage
 -----
 
-	`docker-compose up &`
+	docker-compose up &
+
+If you wish to use glide in your project use the convenient glide container or run the /scripts/glide.sh script inside your container.  To create the glide container specify the docker-compose-glide.yml composer script.
+
+	docker-compose -f docker-compose-glide.yml up
+
 
 Recompile
 ---------
