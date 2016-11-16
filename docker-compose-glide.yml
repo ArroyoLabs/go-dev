@@ -2,8 +2,12 @@ version: '2'
 
 services:
   server:
-    image: golang
-    container_name: go_dev
+    build:
+      context: ./docker
+      args:
+        project_name: hello
+    image: golang_glide
+    container_name: go_dev_glide
     entrypoint: 
       - /go/bin/hello
     env_file: environment.env

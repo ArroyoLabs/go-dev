@@ -1,17 +1,21 @@
-MAINTAINER John Arroyo, john@arroyolabs.com
-
+############################################################
+# Dockerfile to build Golang with glide support
+# Based on golang:latest
+# 
+############################################################
 FROM golang
+
+MAINTAINER John Arroyo, john@arroyolabs.com
  
-# Some convenient updates and tools
-RUN apt-get update && apt-get -y install vim
+# Linux updates
+RUN apt-get update
 
-# Go environment
-ARG PROJECT_NAME
+# Add some go development packages (e.g. glide)
+ADD ./scripts /scripts
+RUN cd /scripts && chmod 770 *.sh && ./setup.sh
 
+# ARG PROJECT_NAME
 # ADD ./src/$PROJECT_NAME /go/src/$PROJECT_NAME
 # RUN cd /go/src && go install $PROJECT_NAME
-
-ADD ./bin /go/bin
-ENTRYPOINT ["/go/bin/hello"]
  
 EXPOSE 8080
