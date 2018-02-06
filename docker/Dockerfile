@@ -1,12 +1,12 @@
 ############################################################
 # Dockerfile to build Golang with glide support
-# Based on golang:latest
-# 
+# Based on golang:1.8
+#
 ############################################################
-FROM golang
+FROM golang:1.8
 
 MAINTAINER John Arroyo, john@arroyolabs.com
- 
+
 # Linux updates
 RUN apt-get update
 
@@ -17,5 +17,5 @@ RUN cd /scripts && chmod 770 *.sh && ./setup.sh
 # ARG PROJECT_NAME
 # ADD ./src/$PROJECT_NAME /go/src/$PROJECT_NAME
 # RUN cd /go/src && go install $PROJECT_NAME
- 
+
 EXPOSE 8080

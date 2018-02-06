@@ -17,7 +17,7 @@ Recompile
 ---------
 
 Connect to your container.  Change "hello" to the name of your project.  From within the container run the following.
-	
+
 	go install hello
 
 restart your container
@@ -31,8 +31,8 @@ Change the entry point in your docker-compose file to be some file or log.
 e.g. tail -f /var/log/bootstrap.log
 
 	entrypoint:
-		- tail 
-    	- -f 
+		- tail
+    	- -f
     	- /var/log/bootstrap.log
 
 This will allow you to figure out why your code is not compiling.  You cannot run the docker container if you do not have a valid entrypoint (e.g. go routine)
