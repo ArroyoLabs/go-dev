@@ -6,6 +6,6 @@
 apt-get -y install vim
 
 # Install glide
-./glide.sh
+./dep.sh
 
-echo "setup.sh complete"
+echo "Setup done."
