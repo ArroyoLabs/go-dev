@@ -1,30 +1,32 @@
-go-dev
-======
+# go-dev
+
 
 Golang development container - a good starting point for general Golang development in a docker container
 
-Usage
------
+## Usage
 
-	docker-compose up &
+```
+docker-compose up &
+```
 
-If you wish to use glide in your project use the convenient glide container or run the /scripts/glide.sh script inside your container.  To create the glide container specify the docker-compose-glide.yml composer script.
+If you wish to use dep for dependency management in your project use the convenient glide container or run the /scripts/dep.sh script inside your container.  To create the glide container specify the docker-compose-glide.yml composer script.
 
-	docker-compose -f docker-compose-glide.yml up
+```
+docker-compose -f docker-compose-dep.yml up
+```
 
-
-Recompile
----------
+## Recompile
 
 Connect to your container.  Change "hello" to the name of your project.  From within the container run the following.
 
-	go install hello
+```
+go install hello
+```
 
-restart your container
+Then restart your container
 
 
-Debugging
----------
+## Debugging
 
 Change the entry point in your docker-compose file to be some file or log.
 
