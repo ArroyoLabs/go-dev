@@ -1,5 +1,5 @@
 ############################################################
-# Dockerfile to build Golang with glide support
+# Dockerfile to build Golang with dep for package management
 # Based on golang:1.10
 #
 ############################################################
@@ -13,9 +13,5 @@ RUN apt-get update
 # Add some go development packages (e.g. glide)
 ADD ./scripts /scripts
 RUN cd /scripts && chmod 770 *.sh && ./setup.sh
-
-# ARG PROJECT_NAME
-# ADD ./src/$PROJECT_NAME /go/src/$PROJECT_NAME
-# RUN cd /go/src && go install $PROJECT_NAME
 
 EXPOSE 8080
