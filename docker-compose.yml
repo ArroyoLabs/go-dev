@@ -10,6 +10,7 @@ services:
       - /go/bin/hello
     env_file: environment.env
     volumes:
-      - ./:/go
+      - ./src:/go
+      - ./docker/scripts:/scripts
     ports:
       - "8080:8080"

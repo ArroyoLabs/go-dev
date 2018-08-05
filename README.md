@@ -28,6 +28,12 @@ go install hello
 
 Then restart your container
 
+## Hugo
+
+```
+docker exec -it golang_dev /scripts/hugo.sh
+```
+
 ## Debugging
 
 Change the entry point in your docker-compose file to be some file or log.
