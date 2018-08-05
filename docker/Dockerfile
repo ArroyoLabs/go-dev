@@ -1,9 +1,9 @@
 ############################################################
-# Dockerfile to build Golang with glide support
-# Based on golang:1.10
+# Dockerfile to build Golang with dep for package management
+# Based on golang:1.9
 #
 ############################################################
-FROM golang:1.10
+FROM golang:1.9
 
 MAINTAINER John Arroyo, john@arroyolabs.com
 
