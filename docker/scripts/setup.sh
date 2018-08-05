@@ -5,7 +5,8 @@
 # linux installs
 apt-get -y install vim
 
-# Install dep
+# Install dep & hugo
 ./dep.sh
+./hugo.sh
 
 echo "Setup done."
