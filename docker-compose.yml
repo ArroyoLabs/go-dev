@@ -2,9 +2,11 @@ version: '2'
 
 services:
   server:
-    image: golang
-    container_name: go_dev
-    entrypoint: 
+    build:
+      context: ./docker
+    image: go_dev
+    container_name: golang_dev
+    entrypoint:
       - /go/bin/hello
     env_file: environment.env
     volumes:

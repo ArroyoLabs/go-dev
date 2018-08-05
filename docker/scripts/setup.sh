@@ -5,7 +5,7 @@
 # linux installs
 apt-get -y install vim
 
-# Install glide
+# Install dep
 ./dep.sh
 
 echo "Setup done."

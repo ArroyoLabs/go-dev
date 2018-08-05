@@ -2,14 +2,13 @@ version: '2'
 
 services:
   server:
-    build:
-      context: ./docker
-    image: golang_glide
-    container_name: go_dev_dep
-    entrypoint:
+    image: golang
+    container_name: go_dev
+    entrypoint: 
       - /go/bin/hello
     env_file: environment.env
     volumes:
       - ./:/go
+      - ./docker/scripts:/scripts
     ports:
       - "8080:8080"

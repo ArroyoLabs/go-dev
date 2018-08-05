@@ -1,19 +1,22 @@
 # go-dev
 
-
 Golang development container - a good starting point for general Golang development in a docker container
 
 ## Usage
+
+Simple Go container with dep installed
 
 ```
 docker-compose up &
 ```
 
-If you wish to use dep for dependency management in your project use the convenient glide container or run the /scripts/dep.sh script inside your container.  To create the glide container specify the docker-compose-glide.yml composer script.
+For a more generic installation, checkout of the docker-compose-vanilla.yml file.  It's a useful recipe for leveraging the latest golang docker image.
 
 ```
-docker-compose -f docker-compose-dep.yml up
+docker-compose -f docker-compose-vanilla.yml up
 ```
+
+If you wish to use dep for dependency management in your vanilla container run the /scripts/dep.sh script or /scripts/glide.sh script inside your container.
 
 ## Recompile
 
@@ -24,7 +27,6 @@ go install hello
 ```
 
 Then restart your container
-
 
 ## Debugging
 
