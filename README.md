@@ -34,6 +34,14 @@ Then restart your container
 docker exec -it golang_dev /scripts/hugo.sh
 ```
 
+## Container
+
+To connect to the container
+
+```
+docker exec -it golang_dev /bin/bash
+```
+
 ## Debugging
 
 Change the entry point in your docker-compose file to be some file or log.
