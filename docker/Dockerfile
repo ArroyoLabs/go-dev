@@ -10,7 +10,7 @@ MAINTAINER John Arroyo, john@arroyolabs.com
 # Linux updates
 RUN apt-get update
 
-# Add some go development packages (e.g. glide)
+# Add some go development packages
 ADD ./scripts /scripts
 RUN cd /scripts && chmod 770 *.sh && ./setup.sh
 

@@ -30,6 +30,8 @@ Then restart your container
 
 ## Hugo
 
+Install Hugo
+
 ```
 docker exec -it golang_dev /scripts/hugo.sh
 ```

@@ -7,6 +7,6 @@ apt-get -y install vim
 
 # Install dep & hugo
 ./dep.sh
-./hugo.sh
+./hugo-extended.sh
 
 echo "Setup done."
