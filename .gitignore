@@ -1,2 +1,4 @@
 .DS_Store
 /bin/glide
+/pkg
+/bin/hugo
