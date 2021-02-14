@@ -13,4 +13,4 @@ services:
       - ./:/go
       - ./docker/scripts:/scripts
     ports:
-      - "8080:8080"
+      - "8888:8080"

@@ -2,11 +2,10 @@
 
 # this will get ran with the docker file and run the default scripts
 
-# linux installs
-apt-get -y install vim
+# linux package installs
+apt install vim -y
 
-# Install dep & hugo
-./dep.sh
+# Install Hugo
 ./hugo-extended.sh
 
 echo "Setup done."

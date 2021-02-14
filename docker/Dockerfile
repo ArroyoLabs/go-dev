@@ -1,17 +1,18 @@
 ############################################################
-# Dockerfile to build Golang with dep for package management
-# Based on golang:1.10
+# Dockerfile to build Golang with Hugo
+# Based on golang 1.15 buster
 #
 ############################################################
-FROM golang:1.10
+FROM golang:1.15-buster
 
-MAINTAINER John Arroyo, john@arroyolabs.com
+LABEL maintainer="John Arroyo john.arroyo@gmail.com"
 
 # Linux updates
-RUN apt-get update
+RUN apt update
 
 # Add some go development packages
 ADD ./scripts /scripts
-RUN cd /scripts && chmod 770 *.sh && ./setup.sh
+RUN cd /scripts && chmod 770 *.sh 
+# && ./setup.sh
 
 EXPOSE 8080
