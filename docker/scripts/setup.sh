@@ -6,6 +6,6 @@
 apt install vim -y
 
 # Install Hugo
-./hugo-extended.sh
+./hugo.sh
 
 echo "Setup done."
