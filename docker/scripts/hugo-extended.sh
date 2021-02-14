@@ -7,4 +7,4 @@ dpkg -i hugo*.deb
 ln -s /usr/local/bin/hugo /usr/bin/hugo 
 rm hugo*.deb
 
-echo "Hugo Extended installation complete"
+echo "Hugo extended installation complete"
