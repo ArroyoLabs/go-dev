@@ -12,7 +12,6 @@ RUN apt update
 
 # Add some go development packages
 ADD ./scripts /scripts
-RUN cd /scripts && chmod 770 *.sh 
-# && ./setup.sh
+RUN cd /scripts && chmod 770 *.sh && ./setup.sh
 
 EXPOSE 8080
