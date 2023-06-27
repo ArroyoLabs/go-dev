@@ -1,9 +1,9 @@
 ############################################################
 # Dockerfile to build Golang with Hugo
-# Based on golang 1.15 buster
+# Based on golang 1.20
 #
 ############################################################
-FROM golang:1.15-buster
+FROM golang:1.20
 
 LABEL maintainer="John Arroyo john.arroyo@gmail.com"
 
